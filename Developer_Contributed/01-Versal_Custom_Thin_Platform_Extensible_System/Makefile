@@ -29,19 +29,19 @@ VITIS_VERSION                     := $(shell vitis -version 2>/dev/null | grep "
 ###############################################
 
 # DEVICE_NAME = xcvc1902-vsva2197-2MP-e-S or xcvc1902-vsva2197-2MP-e-S-es1
-export DEVICE_NAME                := xcvc1902-vsva2197-2MP-e-S
+export DEVICE_NAME                := xcvc1902-vsva2197-2MP-e-S-es1
 
 # TARGET = hw or hw_emu
 export TARGET                     := hw
 
 # ILA_EN = 0 (Disabled) or 1 (Enabled)
-export ILA_EN                     := 0
+export ILA_EN                     := 1
 
 # LINUX_BUILD_TOOL = petalinux or yocto
 export LINUX_BUILD_TOOL           := petalinux
 
 # LINUX_TMP_DIR = Any dir which is not NFS
-export LINUX_TMP_DIR              := /tmp/${USER}/${REQUIRED_VERSION}/${LINUX_BUILD_TOOL}
+export LINUX_TMP_DIR              := /scratch/ocousin/${USER}/${REQUIRED_VERSION}/${LINUX_BUILD_TOOL}
 
 # LINUX_YOCTO_ROOT = Directory where yocto tools are installed
 # Used ONLY when LINUX_BUILD_TOOL := yocto!
